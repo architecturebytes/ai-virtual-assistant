@@ -24,7 +24,9 @@ def listen():
     with sr.Microphone() as source:
         print('Listening....')
         r.pause_threshold = 1
-        audio = r.listen(source)
+        #audio = r.listen(source)
+        #Adjust or remove the phrase_time_limit as per your needs
+        audio = r.listen(source, phrase_time_limit=10)
     
     try:
         print('Recognizing...')
